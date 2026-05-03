@@ -2,24 +2,60 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Déjanos tu reseña</title>
+  <title>Tu opinión importa</title>
 
-  <script>
-    setTimeout(function(){
-      window.location.href = "https://search.google.com/local/writereview?placeid=ChIJYx2SX11rWQ0RweUkIpMXkug";
-    }, 1500);
-  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 60px;
+      background: #111;
+      color: #fff;
+    }
 
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: block;
+      width: 80%;
+      max-width: 300px;
+      margin: 20px auto;
+      padding: 15px;
+      font-size: 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .good {
+      background: #28a745;
+    }
+
+    .bad {
+      background: #dc3545;
+    }
+
+    p {
+      opacity: 0.8;
+    }
+  </style>
 </head>
 
-<body style="text-align:center; font-family:sans-serif; padding-top:50px;">
-  <h1>💈 Gracias por tu visita</h1>
-  <p>En breve podrás dejarnos tu reseña ⭐</p>
+<body>
 
-  <br><br>
+  <h1>💈 ¿Qué tal ha sido tu experiencia?</h1>
+  <p>Tu opinión nos ayuda a mejorar</p>
 
-  <a href="https://search.google.com/local/writereview?placeid=ChIJYx2SX11rWQ0RweUkIpMXkug">
-    👉 Si no carga, pulsa aquí
+  <a class="btn good"
+     href="https://search.google.com/local/writereview?placeid=ChIJYx2SX11rWQ0RweUkIpMXkug">
+    ⭐ Buena experiencia → Dejar reseña
+  </a>
+
+  <a class="btn bad"
+     href="https://wa.me/34XXXXXXXXX">
+    💬 Mala experiencia → Hablar con nosotros
   </a>
 
 </body>

@@ -1,101 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reseña</title>
+  <meta charset="UTF-8">
+  <title>Déjanos tu reseña</title>
 
-<style>
-body {
-    font-family: Arial;
-    text-align: center;
-    background: #f4f6f8;
-    margin-top: 100px;
-}
-
-.box {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    display: inline-block;
-}
-
-.star {
-    font-size: 30px;
-    cursor: pointer;
-    color: gray;
-}
-
-.star.selected {
-    color: gold;
-}
-
-button {
-    padding: 10px 20px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-</style>
+  <script>
+    setTimeout(function(){
+      window.location.href = "https://search.google.com/local/writereview?placeid=ChIJYx2SX11rWQ0RweUkIpMXkug";
+    }, 1500);
+  </script>
 
 </head>
-<body>
 
-<div class="box">
-    <h2>Tu opinión nos ayuda a mejorar 🙌</h2>
-<p>Valora tu experiencia en menos de 5 segundos</p>
+<body style="text-align:center; font-family:sans-serif; padding-top:50px;">
+  <h1>💈 Gracias por tu visita</h1>
+  <p>En breve podrás dejarnos tu reseña ⭐</p>
 
-    <div>
-        <span class="star" data-value="1">★</span>
-        <span class="star" data-value="2">★</span>
-        <span class="star" data-value="3">★</span>
-        <span class="star" data-value="4">★</span>
-        <span class="star" data-value="5">★</span>
-    </div>
+  <br><br>
 
-    <br>
-
-    <button onclick="enviar()">Enviar valoración</button>
-
-    <p id="mensaje"></p>
-</div>
-
-<script>
-
-let rating = 0;
-const stars = document.querySelectorAll(".star");
-
-// seleccionar estrellas
-stars.forEach(star => {
-    star.addEventListener("click", () => {
-        rating = star.getAttribute("data-value");
-
-        stars.forEach(s => s.classList.remove("selected"));
-
-        for (let i = 0; i < rating; i++) {
-            stars[i].classList.add("selected");
-        }
-    });
-});
-
-function enviar() {
-
-    if (rating == 0) {
-        document.getElementById("mensaje").innerText = "Selecciona una puntuación";
-        return;
-    }
-
-    // 🔥 CAMBIA ESTE LINK
-    const googleLink = "https://search.google.com/local/writereview?placeid=ChIJYx2SX11rWQ0RweUkIpMXkug;
-
-    if (rating >= 4) {
-        window.location.href = googleLink;
-    } else {
-        document.getElementById("mensaje").innerText = "Gracias por tu opinión, la tendremos en cuenta.";
-    }
-}
-
-</script>
+  <a href="https://search.google.com/local/writereview?placeid=ChIJYx2SX11rWQ0RweUkIpMXkug">
+    👉 Si no carga, pulsa aquí
+  </a>
 
 </body>
 </html>
